@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rodent Form V2</title>
+  </head>
+  <div style="font-size: 8pt; margin: 3mm 3mm;">
+    <!-- " line-height: 90%;"> -->
+    <!-- Logo and company contact info -->
+    <header style="display: grid; grid-template-columns: 1fr 1fr 1fr;">
+        <div>
+            <p style="margin: 0px; margin-left: 15px; margin-top: 8px">
+                1301 Elm Place<br />
+                Kelso, WA 98626<br />
+                (360) 636-0560<br />
+              </p>
+              <p>info@interstatepest.com</p>
+        </div>
+        <div style="text-align: center;">
+            <img
+            src="https://raw.githubusercontent.com/Interstate-Pest/imageRepo/main/IPM_Logo_SM.png"
+            style="width: 90px; height: 80px"
+          /> 
+        </div>
+        <div style="text-align: right;">
+            <h3>Interstate Pest Management</h3>
+            <p style="font-size: 12px;"><i>Exceeding expectations since 1963!</i></p>
+          </div>
+    </header>
+    <h3 style="text-align: center;">WILDLIFE REPAIRS</h3>
+      <!-- Customer Contact info -->
+      <article style="border: 1px solid black">
+        <div
+          class="mainGrid"
+          style="display: grid; grid-template-columns: 1fr 1fr"
+        >
+        <!-- Left hand panel -->
+          <div class="mainCol1">
+            <div
+              class="formSection"
+              style="
+                border: 1px solid black;
+                display: grid;
+                grid-template-columns: 1fr 3fr;
+                padding: 3pt;
+              "
+            >
+              <label for="">SUBMITTED TO</label>
+              <input type="text" style="width: 95%; border: none;" value="{{customerName}}"/>
+            </div>
+            <div
+              class="formSection"
+              style="
+                border: 1px solid black;
+                display: grid;
+                grid-template-columns: 1fr 3fr;
+                padding: 3px;
+              "
+            >
+              <label for="">STREET</label>
+              <input type="text" style="width: 95%; border: none;" value="{{customerAddress}}"/>
+            </div>
+            <div
+              class="formSection"
+              style="
+                border: 1px solid black;
+                display: grid;
+                grid-template-columns: 1fr 3fr;
+                padding: 3px;
+              "
+            >
+              <label for="">CITY, STATE</label>
+              <input type="text" style="width: 95%; border: none;" value="{{customerCity}}, {{customerState}}"/>
+            </div>
+            <div
+              class="formSection"
+              style="
+                border: 1px solid black;
+                display: grid;
+                grid-template-columns: 1fr 3fr;
+                padding: 3px;
+              "
+            >
+              <label for="">ZIP</label>
+              <input type="text" style="width: 95%; border: none;" value="{{customerZip}}"/>
+            </div>
+          </div>
+          <!-- Right hand panel -->
+          <div class="mainCol2">
+            <div
+            class="formSection"
+            style="
+              border: 1px solid black;
+              display: grid;
+              grid-template-columns: 1fr 3fr;
+              padding: 3pt;
+            "
+          >
+            <label for="">EMAIL</label>
+            <input type="text" style="width: 95%; border: none;" value="{{customerEmail}}"/>
+          </div>
+            <div
+              class="formSection"
+              style="
+                border: 1px solid black;
+                display: grid;
+                grid-template-columns: 1fr 3fr;
+                padding: 3px;
+              "
+            >
+              <label for="">PHONE</label>
+              <input type="text" style="width: 95%; border: none;" value="{{customerPhone}}"/>
+            </div>
+            <div
+              class="formSection"
+              style="
+                border: 1px solid black;
+                display: grid;
+                grid-template-columns: 1fr 3fr;
+                padding: 3px;
+              "
+            >
+              <label for="">INSPECTED BY</label>
+              <input type="text" style="width: 95%; border: none;" />
+            </div>
+            <div
+              class="formSection"
+              style="
+                border: 1px solid black;
+                display: grid;
+                grid-template-columns: 1fr 3fr;
+                padding: 3px;
+              "
+            >
+              <label for="">INSPECTION DATE</label>
+              <input type="text" style="width: 95%; border: none;" />
+            </div>
+        </div>
+      </article>
+      <!-- Summary of inspection -->
+      <div class="emptyBox" style="height: 1rem;">
+        <h3 style="text-align: center;">SUMMARY OF INSPECTION</h3>
+      </div>
+      <article style="border: 2px solid black; padding: 3pt;">
+          <div id="activity">
+            <label for="activtiyLevels"style="text-decoration: underline;">WILDLIFE ACTIVITY AND PRESSURE:</label>
+          </div>
+          <div style="padding: 5px;">
+            <textarea name="activityLevels" rows="4" maxlength="350" style="width: 100%; resize: none; border: none;"></textarea>
+          </div>
+          <div id="repairs">
+            <label for="activtiyLevels"style="text-decoration: underline;">EXCLUSION AND REPAIRS</label>
+          </div>
+          <div style="padding: 10px;">
+            <textarea name="activityLevels" rows="4" maxlength="350" style="width: 100%; resize: none; border: none;"></textarea>
+          </div>
+    </article>
+    <!-- Inspected items -->
+    <div class="emptyBox" style="height: 1rem;">
+      <h3 style="text-align: center;">TRAPPING</h3>
+    </div>
+    <article style="display: grid; grid-template-columns: 66% 1fr 1fr;">
+      <div style="display: grid; grid-template-rows: 1fr 3fr;">
+        <label style="border: 1px solid black; padding: 2pt; border-bottom: none; font-weight: bold;">DESCRIPTION</label>
+        <textarea rows="5" maxlength="200" style="resize: none;"></textarea>
+      </div>
+      <div style="display: grid; grid-template-rows: 1fr 3fr;">
+        <label style="border: 1px solid black; padding: 2pt; border-bottom: none; font-weight: bold;">DURATION</label>
+        <textarea rows="5" maxlength="200" style="resize: none;"></textarea>
+      </div>
+      <div style="display: grid; grid-template-rows: 1fr 3fr;">
+        <label style="border: 1px solid black; padding: 2pt; border-bottom: none; font-weight: bold;">COST</label>
+        <textarea rows="5" maxlength="200" style="resize: none;"></textarea>
+      </div>
+    </article>
+    <!-- Repair items -->
+    <div class="emptyBox" style="height: 1rem;">
+      <h3 style="text-align: center;">REPAIR ITEMS</h3>
+    </div>
+    <article style="display: grid; grid-template-columns: 66% 1fr 1fr;">
+      <div style="display: grid;">
+        <label style="border: 1px solid black; padding: 2pt; border-bottom: none; font-weight: bold;">ITEM</label>
+        <input maxlength="25">
+        <input maxlength="25">
+        <input maxlength="25">
+        <input maxlength="25">
+        <input maxlength="25">
+        <input maxlength="25">
+        <input maxlength="25">
+      </div>
+      <div style="display: grid;">
+        <label style="border: 1px solid black; padding: 2pt; border-bottom: none; font-weight: bold;">QUANTITY</label>
+        <input maxlength="2" style="text-align: center;">
+        <input maxlength="2" style="text-align: center;">
+        <input maxlength="2" style="text-align: center;">
+        <input maxlength="2" style="text-align: center;">
+        <input maxlength="2" style="text-align: center;">
+        <input maxlength="2" style="text-align: center;">
+        <input maxlength="2" style="text-align: center;">
+      </div>
+      <div style="display: grid;">
+        <label style="border: 1px solid black; padding: 2pt; border-bottom: none; font-weight: bold;">COST</label>
+        <input maxlength="7" style="text-align: center;">
+        <input maxlength="7" style="text-align: center;">
+        <input maxlength="7" style="text-align: center;">
+        <input maxlength="7" style="text-align: center;">
+        <input maxlength="7" style="text-align: center;">
+        <input maxlength="7" style="text-align: center;">
+        <input maxlength="7" style="text-align: center;">
+      </div>
+    </article>
+
+    <!-- Terms -->
+    <h3 style="font-weight: bold; text-align: center;">WE PROPOSE TO FURNISH AND LABOR - COMPLETE IN ACCORDANCE WITH ABOVE SPECIFICATIONS</h3>
+    <p style="text-align: center; font-size: 7pt;">Warranty and Diagram on page 2</p>
+    <article>
+      <div class="col1" style="display: grid; grid-template-columns: 1fr 1fr;">
+        <div>
+          <label>FOR THE SUM OF: </label>
+          <input type="text" style="font-weight: bold; border: none; border-bottom: 1px solid black; text-align: center;">
+          <label>PLUS APPLICABLE TAXES</label>
+        </div>
+        <div>
+          <label>DEPOSIT REQUIRED:</label>
+          <input type="text" style="font-weight: bold; border: none; border-bottom: 1px solid black; text-align: center;">
+        </div>
+      </div>
+      <p style="font-weight: bold; margin: 10pt 0pt 10pt 0pt;">PROPOSAL MAY BE WITHDRAWN IF NOT ACCEPTED WITHIN 45 DAYS</p>
+      <div class="col1" style="display: grid; grid-template-columns: 1fr 1fr;">
+        <div class="inspectorSig">
+          <label>INSPECTOR SIGNATURE</label>
+          <div class='realimage' prtype='signaturepicker' for="employee" style='width:100px; border: none; height:60px;'></div>
+        </div>
+        <div class="customerSig">
+          <label>CUSTOMER SIGNATURE</label>
+          <div class='realimage' prtype='signaturepicker' for="customer" style='width:100px; border: none; height:60px;'></div>
+        </div>
+      </div>
+      <p style="margin: 0px; text-align: right;">Page 1 of 2</p>
+    </article>
+    <!-- Page break for printing -->
+    <div style="page-break-after: always;"></div>
+    <!-- Diagram of repairs -->
+    <div class="emptyBox" style="height: 1rem;">
+      <h3 style="text-align: center;">DIAGRAM OF REPAIR ITEMS</h3>
+    </div>
+    <article style="margin-bottom: 10px;">
+     <div prtype="imagepicker" style="
+              width: 100%;
+              height: 400px;
+              clear: both;
+              border: 1px solid #000;
+              text-align: center;
+            ">
+      </div>
+    </article>
+    <!-- Key -->
+    <!-- Warranty and guarantee -->
+    <article>
+      <div>
+        <h3>WARRANTY</h3>
+        <p>All proposed work is to be completed according to standard practices. In the event of alteration or deviation from above specification involving extra costs will be executed only upon written orders and will be an extra charge over the estimate. All agreements are contingent upon strikes, accidents, or delays beyond our control. Our workers are fully covered by workman's compensation insurance. The homeowner assumes all responsibility for damages due to breakage of any hidden fuel/ utility service lines, though we will do our best to avoid such damage. All proposals based primarily on homeowner's description of the problem.</p>
+      </div>
+      <div>
+        <h3>GUARANTEE OF EXCLUSION SERVICES</h3>
+        <p>Interstate Pest Management guarantees all exclusion services rendered for 1 Year. The guarantee may be extended each year after, pending completion of a $200 annual inspection of the home. Our Forever Warranty is offered to customers who subscribe to our ALL Seasons Plus reoccurring maintenance service. The guarantee covers the EXACT locations where exclusion services were performed by Interstate Pest Management, INC. (Referred to as "IPM"). "IPM" will not guarantee that an animal will never gain access but more so that access will not be obtained through exclusion work that "IPM" deemed necessary to exclude and performed said exclusion work. Under our guarantee, if an animal gains access in a specific area(s) that was excluded, "IPM" agrees to trap for up to 1 week and repair the exclusion work in the same area at no additional charge. If "IPM" is called out for a breach in the exclusion and it is determined that there was no breach in our exclusion work, then there will be a trip/inspection charge depending on travel time and time involved in the inspection of $125 per occurrence. Under no circumstances will "IPM" warranty or guarantee any work performed by other companies. If there is preexisting work done and "IPM" is hired to fix the work done, "IPM" only guarantees the areas where exclusion work was performed by "IPM." Any modifications (examples: remodeling, painting, storm damage) to our exclusion work will void our warranty & guarantee.</p>
+        <p>SUMP PUMPS AND DEHUMIDIFIERS ARE COVERED UNDER A SEPARATE MANUFACTURER WARRANTY. HOMEOWNERS MUST PROVIDE PROPER ELECTRICAL OUTLETS FOR EQUIPMENT TO BE INSTALLED. INTERSTATE PEST MANAGEMENT IS NOT RESPONSIBLE FOR WATER ONCE IT IS PUMPED FROM THE HOUSE.</p>
+      </div>
+      <div>
+        <h3>ACCEPTANCE OF PROPOSAL:</h3>
+        <p>The attached prices and specifications, conditions and separate warranty are satisfactory and hereby accepted. You are authorized to do the work as specified.</p>
+        <h3>PAYMENTS TO BE PAID IN FULL UPON COMPLETION OF SERVICES.</h3>
+      </div>
+    </article>
+    <div id="space" style="height: 5vh;"></div>
+    <footer style="display: grid; grid-template-columns: 1fr 1fr 1fr;">
+      <div>
+          <p style="margin: 0px; margin-left: 15px; margin-top: 8px">
+              1301 Elm Place<br />
+              Kelso, WA 98626<br />
+              (360) 636-0560<br />
+            </p>
+            <p>info@interstatepest.com</p>
+      </div>
+      <div style="text-align: center;">
+          <img
+          src="https://raw.githubusercontent.com/Interstate-Pest/imageRepo/main/IPM_Logo_SM.png"
+          style="width: 90px; height: 80px"
+        /> 
+      </div>
+      <div style="text-align: right;">
+          <h3>Interstate Pest Management</h3>
+          <p style="font-size: 12px;"><i>Exceeding expectations since 1963!</i></p>
+        </div>
+  </footer>
+  <p style="text-align: right;">Page 2 of 2</p>
+    <!-- page 2 of 2 -->
+    
+</div>
+</html>
